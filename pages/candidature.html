@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidature - La pépinière d'entreprises de Dreux</title>
+<meta name="description" content="Formulaire de candidature pour la pépinière d'entreprises de Dreux">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/candidature.css">
+
+</head>
+<body>
+<header>
+  <div class="logo"><a href="../index.html"><img src="../images/logo_leaf- grey white.png" alt="logo leaf"></a></div>
+  <div class="Headline">
+    <h1>La pépinière <br> d'entreprises de <br> Dreux</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil |</a></li>
+        <li><a href="../pages/simplanter.html">S'implanter |</a></li>
+        <li><a href="../pages/entreprises.html">Entreprises hébergées |</a></li>
+        <li><a href="../pages/actualite.html">Actualités |</a></li>
+        <li><a href="../pages/contact.html">Contact |</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="content-wrapper">
+  <div class="white-section">
+    <!-- Side Navigation -->
+    <div class="side-nav">
+      <a href="../pages/espaces.html" class="arrow-left">Espace et tarifs</a>
+      <a href="../pages/conditions.html" class="arrow-right">Conditions</a>
+    </div>
+
+    <!-- STEP 1: Information Form -->
+    <div class="form-step active" id="step1">
+      <h2 class="form-title">Informations générales sur le porteur du projet</h2>
+      
+      <form id="candidatureForm">
+        <div class="form-section">
+          <div class="form-row">
+            <label>Local souhaité</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="local" value="atelier"> Atelier</label>
+              <label><input type="checkbox" name="local" value="bureau"> Bureau</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Durée souhaitée</label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="duree" value="bail_court">
+                Entreprise de + 3 ans - ATELIER - Bail de courte durée 3 ans
+              </label>
+              <label>
+                <input type="checkbox" name="duree" value="convention">
+                Entreprise de - 3 ans - ATELIER ou BUREAU TERTIAIRE - Convention de mise à disposition de 23 mois uniquement
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Date d'entrée souhaitée dans les locaux</label>
+            <input type="date" name="date_entree" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Informations entreprise</h3>
+          
+          <div class="form-row">
+            <label>Nom de l'entreprise qui occupera le local</label>
+            <input type="text" name="nom_entreprise" required>
+          </div>
+
+          <div class="two-col">
+            <div class="form-row">
+              <label>Nom du dirigeant</label>
+              <input type="text" name="nom_dirigeant" required>
+            </div>
+            <div class="form-row">
+              <label>Prénom du dirigeant</label>
+              <input type="text" name="prenom_dirigeant" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Adresse complète</label>
+            <textarea name="adresse" required></textarea>
+          </div>
+
+          <div class="two-col">
+            <div class="form-row">
+              <label>Téléphone</label>
+              <input type="tel" name="telephone" required>
+            </div>
+            <div class="form-row">
+              <label>Mail</label>
+              <input type="email" name="email" required>
+            </div>
+          </div>
+
+         
+
+          <div class="form-row">
+            <label>Date de création</label>
+            <input type="date" name="date_creation" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Détail de l'activité</h3>
+          <div class="form-row">
+            <label>Offre de produits, services, clientèle, concurrence...</label>
+            <textarea name="detail_activite" placeholder="Décrivez votre activité en détail" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Éléments clés du projet</h3>
+          
+          <div class="two-col">
+            <div class="form-row">
+              <label>Nombre d'emplois dans l'entreprise</label>
+              <input type="number" name="emplois_actuels" required min="1">
+            </div>
+            <div class="form-row">
+              <label>Âge de l’entreprise (en années)</label>
+              <input type="number" name="emplois_3ans" required min="1">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Capacité de financement</label>
+            <textarea name="financement" placeholder="Apport personnel, financement externe, charges prévisionnelles, autres..." required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label>Étude de la rentabilité, les perspectives chiffrées sur 3 ans</label>
+            <textarea name="rentabilite" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="button" class="btn" onclick="nextStep()">Suivant</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- STEP 2: Document Upload -->
+    <div class="form-step" id="step2">
+      <h2 class="form-title">Pièces à fournir</h2>
+
+      <div class="document-list">
+        <div class="document-category">
+          <h3>1. Documents transmis par l'Agglo du Pays de Dreux</h3>
+          <ul>
+            <li>- Convention de mise à disposition</li>
+            <li>- Ordre de virements d'office (ne pas oublier de transmettre un exemplaire à la banque pour programmer le virement mensuel)</li>
+          </ul>
+        </div>
+
+        <div class="document-category">
+          <h3>2. À transmettre par le locataire obligatoirement avant l'entrée dans les locaux</h3>
+          <ul>
+            <li>- Attestation d'assurance</li>
+          </ul>
+        </div>
+
+        <div class="document-category">
+          <h3>À transmettre avec le dossier de candidature</h3>
+          <table class="document-table">
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Nature</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>CV du dirigeant</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file1').click()">Parcourir</button>
+                    <input type="file" id="file1" accept=".pdf,.doc,.docx">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Pièce d'identité du dirigeant</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file2').click()">Parcourir</button>
+                    <input type="file" id="file2" accept=".pdf,.jpg,.jpeg,.png">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Prévisionnel financier de l'entreprise à 3 ans</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file3').click()">Parcourir</button>
+                    <input type="file" id="file3" accept=".pdf,.xls,.xlsx">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Bilan de l'entreprise (si existant)</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file4').click()">Parcourir</button>
+                    <input type="file" id="file4" accept=".pdf,.xls,.xlsx">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Compte de résultat</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file5').click()">Parcourir</button>
+                    <input type="file" id="file5" accept=".pdf,.xls,.xlsx">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Extrait Kbis (de moins de 3 mois)</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file6').click()">Parcourir</button>
+                    <input type="file" id="file6" accept=".pdf">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Statuts à jour et certifié conforme par le dirigeant légal</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file7').click()">Parcourir</button>
+                    <input type="file" id="file7" accept=".pdf">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Relevé d'Identité Bancaire</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file8').click()">Parcourir</button>
+                    <input type="file" id="file8" accept=".pdf">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Règlement intérieur signé (document en pièce-jointe)</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file9').click()">Parcourir</button>
+                    <input type="file" id="file9" accept=".pdf">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="document-category">
+          <h3>Après validation du dossier de candidature</h3>
+          <table class="document-table">
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Nature</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10</td>
+                <td>Convention de mise à disposition ①</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file10').click()">Parcourir</button>
+                    <input type="file" id="file10" accept=".pdf">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Ordre de virements d'office ①</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file11').click()">Parcourir</button>
+                    <input type="file" id="file11" accept=".pdf">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Attestation d'assurance ②</td>
+                <td>
+                  <div class="file-input-wrapper">
+                    <button class="upload-btn" onclick="document.getElementById('file12').click()">Parcourir</button>
+                    <input type="file" id="file12" accept=".pdf">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="upload-area">
+          <p>📎 Ou déposez tous vos documents ici en une seule fois</p>
+          <button class="btn" onclick="document.getElementById('fileUploadAll').click()" style="margin-top: 15px;">Sélectionner plusieurs fichiers</button>
+          <input type="file" id="fileUploadAll" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.xls,.xlsx">
+        </div>
+      </div>
+
+      <div class="form-buttons">
+        <button type="button" class="btn btn-secondary" onclick="prevStep()">Précédent</button>
+        <button type="button" class="btn" onclick="submitForm()">Envoyer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer">
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Plan du site |</a></li>
+        <li><a href="#">Mentions légales |</a></li>
+        <li><a href="#">Gestion des cookies |</a></li>
+      </ul>
+    </div>
+    <div class="footer-logo">
+      <a href="https://www.dreux-agglomeration.fr/" target="_blank" rel="noopener noreferrer">
+        <img src="../images/LOGO_Agglo_Pays_Dreux-200-2.png" alt="logo de l'Agglo de Dreux">
+      </a>
+    </div>
+    
+</footer>
+
+<script src="../assets/candidature.js"></script> 
+</body>
+</html>
