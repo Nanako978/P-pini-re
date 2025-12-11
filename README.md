@@ -1,2 +1,2 @@
 # Pepiniere
-This is a website les pépinières d'entreprises de Dreux. 
+This is a website for les pépinières d'entreprises de Dreux. 
